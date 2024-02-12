@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{%block content%}
+<style>    body {background-color: #E4C8E6
+    ;}
+    .cadastro{
+        background-color: #480495;
+        font-family: Arial, Helvetica, sans-serif;
+        
+        color: #FFFFFF;
+        border: none;
+        padding: 15px;
+        font-size: 10px;
+        border-radius: 10px;
+        width: 300px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        
+
+    }
+
+    a{
+
+        color: #FFFFFF;
+        font-size: 20px;
+    }
+    </style>
+<body>
+    <center><h2>Tela de cadastros</h2>
+<div class="cadastro">
+    </color><center><h2> <li><a href="{% url 'new_desktop' %}">Cadastro de desktops</a></li> </h2>
+</div>
+</center>
+</body>
+
+{% endblock %}

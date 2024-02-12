@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+   <style> 
+.button1 {
+  background-color: #6f39ad;
+  border: none;
+  color: white; 
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px; 
+  align-items: center;
+
+}
+.button2 {
+  background-color: #6f39ad;
+  border: none;
+  color: white; 
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px; 
+  align-items: center;
+
+}
+.button3 {
+  background-color: #6f39ad;
+  border: none;
+  color: white; 
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px; 
+  align-items: center;
+
+  
+}
+
+a{
+  color: aliceblue;
+}
+
+
+
+</style>
+
+  <div class="pc-details">
+    
+   
+    <img src="{{ desktop.photo.url }}" alt="{{ desktop.Processador }} - {{ desktop.MemoriaRam }}">
+            <h2>{{ desktop.Processador }}  {{ desktop.PlacaDeVideo }}  {{ desktop.Memoria }}  {{ desktop.Gabinete }}  {{ desktop.Fonte }}</h2>
+            <p> R$ {{ desktop.Valor }}</p>
+            <p>{{ desktop.Descricao }}</p>
+    </div>      
+    <center>
+    <div class="button1">
+       <a href= "{% url 'PCs' %}">Voltar</a> 
+
+      </div>
+      <div class="button2">
+          <a href="{% url 'desktop_update' pk=desktop.pk %}">Atualizar</a>
+      </div>
+      <div class="button3">
+
+        <a href="{% url 'desktop_delete' pk=object.pk %}" class="btn btn-danger"> Deletar </a>
+
+      </div>
+    </center>
+{% endblock %}
