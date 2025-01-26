@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+    
+   
+  <div class="pc-details">
+    
+    <!-- Adicione outros detalhes conforme necessário -->
+    <img src="{{ desktop.photo.url }}" alt="{{ desktop.Processador }} - {{ desktop.MemoriaRam }}">
+            <h2>{{ desktop.Processador }}  {{ desktop.PlacaDeVideo }}  {{ desktop.Memoria }}  {{ desktop.Gabinete }}  {{ desktop.Fonte }}</h2>
+            <p> R$ {{ desktop.Valor }}</p>
+            <p>{{ desktop.Descricao }}</p>
+            <div class = "botao">
+            <a href= "{% url 'PCs' %}">Voltar</a>
+            <a href="{% url 'desktop_update' pk=desktop.pk %}">Atualizar</a>
+
+
+  </div>
+{% endblock %}
